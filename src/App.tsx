@@ -16,12 +16,12 @@ function App() {
             <div className='flex justify-center '>
               <div className=" rounded-full h-64 w-64 mt-1 mr-2 flex justify-center">
               <div className=" h-full text-xl flex flex-col justify-center">
-                <img src={purpleGradient} alt="Aryan" />
+                <img src={purpleGradient} alt="Jatin" />
               </div>
           </div>
           </div>
           <div className='flex justify-center py-3'>
-            <div className='text-3xl text-regal-grey font-bold'>Hi, I'm Aryan.</div>
+            <div className='text-3xl text-regal-grey font-bold'>Hi, I'm Jatin.</div>
           </div>
           
           <div className='flex justify-center'>
@@ -29,7 +29,7 @@ function App() {
           </div>
           <div></div>
           <div className=' flex justify-center items-center text-gray-500 text-base font-bold text-center'>
-          Proficient Full-Stack Developer | Committed to Lifelong Learning | Bridging the Gap Between Theory and Practical Application to Deliver Exceptional User Experiences
+          Visionary Full-Stack Developer | Harnessing Technology to Drive Business Transformation | Committed to Building User-Centric, Scalable, and Future-Ready Applications
           </div>
           {/* ============= */}
           <div className="flex justify-center gap-6 my-6">
@@ -42,7 +42,7 @@ function App() {
               <div className=' flex justify-center items-center'>
                 {/* <div className=' flex-col justify-center'> */}
                   <button className=" bg-black hover:shadow-lg h-11 hover:bg-slate-800
-                 text-white text-md rounded-lg py-2 px-8" onClick={() => window.open('mailto:aryansindhi18@gmail.com', '_blank')}>
+                 text-white text-md rounded-lg py-2 px-8" onClick={() => window.open('mailto:jating07925@gmail.com', '_blank')}>
                   Work with me  -&gt;
                   </button>
                 {/* </div> */}
