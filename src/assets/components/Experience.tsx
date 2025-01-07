@@ -1,93 +1,111 @@
-export function Experience(){
-    return <>
-        <div id="experience" className="flex flex-col bg-[#FAFAFA] items-center px-4 sm:px-6 md:px-8 justify-center scroll-my-10">
-            <div className="w-full lg:w-[980px] items-start font-extrabold text-gray-500 text-2xl mt-8 mb-3 sm:mt-10 sm:mb-5 px-4">
-                PROFESSIONAL EXPERIENCE
-            </div>
-            <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
-                <div className="f`lex justify-between md:gap-2 items-baseline flex-col md:flex-row">
-                    <div className="font-bold text-xl">
-                        Smart Energy Water | Software Engineer
-                    </div>
-                    <div className="font-semibold text-lg text-gray-500">
-                        Noida, UP | July 2021 - Feb 2024
-                    </div>
-                </div>
-                <div className="gap-1.5 flex flex-col text-[15px]">
-                    <div>
-                        {/* <ul > */}
-                        <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
-                            <li>
-                                Orchestrated the optimization of the auto scheduler, driving successful onboarding of new clients and earning back-to-back Award of Excellence recognition for outstanding contributions within a single year.
-                            </li>
-                            <li>
-                                Diagnosed root cause for very high latency (p99 ~ 10 minutes) of our work order system.
-                                <ul style={{ listStyleType: "circle", paddingLeft: "40px" }}>
-                                <li>
-                                    Improved the latency (p99) from 10 minutes to 2 seconds.
-                                </li>
-                                </ul>
-                            </li>
-                            <li>
-                                Revamped the auto scheduler through the incorporation of advanced algorithms, leading to a 50% improvement in scheduling accuracy and reclaiming over 10 hours per week by minimizing the need for manual adjustments.
-                                <ul style={{ listStyleType: "circle", paddingLeft: "40px" }}>
-                                <li>
-                                    Enhanced work order routing through the integration of location-based pre-route capabilities, leading to a 40% decrease in travel time and fuel costs for field technicians.
-                                </li>
-                                </ul>
-                                <ul style={{ listStyleType: "circle", paddingLeft: "40px" }}>
-                                <li>
-                                    Created a new feature which provides top 5 field workers for each work order beforehand, to enable dispatchers to make quick and sound decisions for emergency work orders.
-                                </li>
-                                </ul>
-                            </li>
-                            <li>
-                                Spearheaded a client project to streamline operations by replacing the traditional paperwork system with our efficient automated smart scheduling solution, resulting in a 50% reduction in administrative tasks.
-                            </li>
-                            <li>
-                                Performed data backfill during the migration to the new database version with a different schema structure.
-                            </li>
-                            <li>
-                                Designed an ETL job to insert daily client assets data of around 100k records into our system.
-                            </li>
-                        </ul>
-                    </div>
-                </div>   
-            </div>
-            {/* ================================================ */}
-            <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
-                <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
-                    <div className="font-bold text-xl">
-                        Smart Energy Water | Software Engineer Intern
-                    </div>
-                    <div className="font-semibold text-lg text-gray-500">
-                        Noida, UP | Jan 2021 - June 2024
-                    </div>
-                </div>
-                <div className="gap-1.5 flex flex-col text-[15px]">
-                    <div>
-                        {/* <ul > */}
-                        <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
-                            <li>
-                                Initiated the integration of Smart Mobile Workforce's flagship product, Schedule and Dispatch, within the product engineering team at SEW. This positively impacted workload management for field workers, fostering superior customer service delivery and optimizing operational efficiency.
-                            </li>
-                            <li>
-                                Developed a cutting-edge SQL Server auto scheduler for a utility company, streamlining work order assignment to the most qualified and available workers, resulting in a 30% reduction in overall project turnaround time.
-                            </li>
-                            <li>
-                                Engineered a flexible and customisable  scheduling system enabling efficient job allocation at customized time intervals, resulting in a 40% reduction in operational costs.
-                                <ul style={{ listStyleType: "circle", paddingLeft: "40px" }}>
-                                <li>
-                                    It schedules approximately 300 work orders daily, saving 4-5 hours of manual work compared to earlier processes.
-                                </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>   
-            </div>  
-            {/* ================================================ */}
-            <div className="h-6"></div>
+export function Experience() {
+  return (
+    <>
+      <div
+        id="experience"
+        className="flex flex-col bg-[#FAFAFA] items-center px-4 sm:px-6 md:px-8 justify-center scroll-my-10"
+      >
+        <div className="w-full lg:w-[980px] items-start font-extrabold text-gray-500 text-2xl mt-8 mb-3 sm:mt-10 sm:mb-5 px-4">
+          PROFESSIONAL EXPERIENCE
         </div>
+        <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+          <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
+            <div className="font-bold text-xl">
+              Smart Energy Water | Software Engineer
+            </div>
+            <div className="font-semibold text-lg text-gray-500">
+              Noida, UP | Jul 2021 - 14 Aug 2024
+            </div>
+          </div>
+          <div className="gap-1.5 flex flex-col text-[15px]">
+            <div>
+              <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
+                <li>
+                  Created a highly efficient C# scheduler console application
+                  that automated data processing tasks such as data dumping,
+                  file writing, SAP integration via SFTP, and table updates
+                  using LINQ; saved 25 hours per week and improved overall
+                  operational efficiency.
+                </li>
+                <li>
+                  Directed seamless integration through Web APIs, efficiently
+                  preprocessing customer JSON payloads to create and update
+                  system data, resulting in a significant improvement of 40% in
+                  data management efficiency.
+                </li>
+                <li>
+                  Reduced data processing time by 70% through implementation of
+                  Advanced Entity Framework functionalities, expediting data
+                  insertion and updates leading to a substantial enhancement in
+                  system reliability.
+                </li>
+                <li>
+                  Elevated user satisfaction by 18% by using comprehensive email
+                  notifications for exceptional scenarios and successful
+                  operations, providing meaningful and informative messages,
+                  enhancing system monitoring and ensuring prompt awareness of
+                  critical system events.
+                </li>
+                <li>
+                  Developed and maintained user-friendly, dynamic single-page
+                  applications (SPAs) using React, Redux , functional Hooks and
+                  improving user interface responsiveness and contributing to a
+                  25% increase in user engagement and satisfaction.
+                </li>
+                <li>
+                  Boosted application performance with strategic optimizations,
+                  achieving an impressive 20% enhancement in page load times.
+                </li>
+                <li>
+                  Implemented Gantt Chart functionality through code flexibility
+                  and Scheduled Work Orders on the Gantt chart utilizing jQuery,
+                  Ajax, JavaScript, C#, and .NET to increase task management
+                  efficiency by 30%.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* ================================================ */}
+        <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+          <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
+            <div className="font-bold text-xl">
+              Smart Energy Water | Software Engineer Intern
+            </div>
+            <div className="font-semibold text-lg text-gray-500">
+              Noida, UP | Jan 2021 - Jun 2021
+            </div>
+          </div>
+          <div className="gap-1.5 flex flex-col text-[15px]">
+            <div>
+              <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
+                <li>
+                  Developed and optimized ASP.NET webpages utilizing HTML, CSS,
+                  JavaScript, jQuery, and Bootstrap, resulting in accelerated
+                  project delivery and enhanced functionality for 4+ clients.
+                </li>
+                <li>
+                  Utilized w2ui to implement a grid system and High charts to
+                  create visually appealing and interactive graphs.
+                </li>
+                <li>
+                  Created map using LeafletJS with marker clustering and lasso
+                  functionality for effective visualization of geographical data
+                  thereby increasing user interactivity by 20%.
+                </li>
+                It schedules approximately 300 work orders daily, saving 4-5
+                hours of manual work compared to earlier processes.
+                <li>
+                  Resolved frontend bugs and issues by conducting thorough code
+                  reviews and implementing effective debugging strategies
+                  resulting in a 30% improvement in overall system stability.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="h-6"></div>
+      </div>
     </>
+  );
 }
