@@ -1,4 +1,3 @@
-import { ImageWithPlaceholder } from "./ImageWithPlaceholder";
 export function Projects() {
   return (
     <>
