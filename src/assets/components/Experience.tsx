@@ -27,19 +27,64 @@ export function Experience() {
                 }}
               >
                 <li>
-                 
+                  Implemented Google SAML SSO using .NET WebAPI and Next.js,
+                  enhancing authentication efficiency for 100% of users with
+                  Safe Token management, leveraging Access Tokens and Refresh
+                  Tokens stored in both DB and Redis, and encrypting
+                  AccessTokens with RSA encryption for added security.
                 </li>
                 <li>
-                 
+                  Engineered a robust password-compliance system using Formik
+                  and Yup to enforce enterprise-grade security policies
+                  incorporating advanced validations (complexity, dictionary
+                  checks, and password history) to safeguard user accounts and
+                  reduce password-related breaches by 35%.
                 </li>
                 <li>
-                 
+                  Integrated Weglot, a paid translation solution to deliver
+                  multilingual capabilities, configuring Spanish and Portuguese
+                  translations, enhancing user engagement by 25%.
                 </li>
                 <li>
-                  
+                  Addressed and mitigated security vulnerabilities reported by
+                  Fortify, ensuring the application meets high security
+                  standards and is protected against common threats.
                 </li>
                 <li>
-                  
+                  Contributed to the development of a real estate marketing
+                  platform providing customized websites for brokers and
+                  realtors, partnering with 100+ marketing centers, including
+                  Alliance, Kentwood, and Exp, Utilized technologies like .NET,
+                  React, TypeScript, API integrations, Microservices, MongoDB,
+                  and SQL DB while working on key subprojects:
+                  <ul
+                    style={{
+                      listStyleType: "circle",
+                      paddingLeft: "40px",
+                      textAlign: "justify",
+                    }}
+                  >
+                    <li>
+                      <span className="font-medium">Control Panel:</span>{" "}
+                      Managed tenant data for 100+ clients.
+                    </li>
+                    <li>
+                      <span className="font-medium">Admin Panel:</span>{" "}
+                      Facilitated seamless creation and configuration for new
+                      tenants.
+                    </li>
+                    <li>
+                      <span className="font-medium">Marketing Center:</span>{" "}
+                      Delivered tenant-specific websites, supporting marketing
+                      efforts across various real estate agencies.
+                    </li>
+                    <li>
+                      <span className="font-medium">.NET Backend:</span>{" "}
+                      Developed and maintained microservices-based architecture,
+                      integrating multiple API projects for scalability and
+                      efficient backend operations.
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
