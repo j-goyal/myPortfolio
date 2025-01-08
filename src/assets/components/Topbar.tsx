@@ -1,4 +1,3 @@
-
 export function TopBar(){
     return <div className="bg-[#fafafa] fixed top-0 left-0 w-full z-50 shadow h-14 flex justify-between px-4 py-8">
         <div className=" font-bold text-2xl flex flex-col justify-center ml-4 h-full">
