@@ -5,6 +5,7 @@ import { GithubIcon } from './assets/components/GithubIcon';
 import { Experience } from './assets/components/Experience';
 import { Projects } from './assets/components/Projects';
 import profilePic from './assets/images/profile-pic.png';
+import { Achievements } from './assets/components/Achievements';
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <div className="h-8"></div>
           <Experience/>
           <Projects/>
+          <Achievements/>
           </main>
       </div>
   );
