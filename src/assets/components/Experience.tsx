@@ -11,7 +11,45 @@ export function Experience() {
         <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
           <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
             <div className="font-bold text-xl">
-              Smart Energy Water | Software Engineer
+              FNF India Private Limited | Software Developer
+            </div>
+            <div className="font-semibold text-lg text-gray-500">
+              Remote | 16 Aug 2024 - Present
+            </div>
+          </div>
+          <div className="gap-1.5 flex flex-col text-[15px]">
+            <div>
+              <ul
+                style={{
+                  listStyleType: "disc",
+                  paddingLeft: "40px",
+                  textAlign: "justify",
+                }}
+              >
+                <li>
+                 
+                </li>
+                <li>
+                 
+                </li>
+                <li>
+                 
+                </li>
+                <li>
+                  
+                </li>
+                <li>
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* ================================================ */}
+        <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+          <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
+            <div className="font-bold text-xl">
+              Smart Energy Water | Product Engineer
             </div>
             <div className="font-semibold text-lg text-gray-500">
               Noida, UP | Jul 2021 - 14 Aug 2024
@@ -19,13 +57,26 @@ export function Experience() {
           </div>
           <div className="gap-1.5 flex flex-col text-[15px]">
             <div>
-              <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
+              <ul
+                style={{
+                  listStyleType: "disc",
+                  paddingLeft: "40px",
+                  textAlign: "justify",
+                }}
+              >
+                <li>
+                  Streamlined large-scale data reporting and reduced reporting
+                  latency by 95% by implementing a .NET 8 scheduler to
+                  consolidate multi-table data into a flat structure, cutting
+                  CSV export time from over 5 minutes to 20 seconds for 200,000+
+                  records.
+                </li>
                 <li>
                   Created a highly efficient C# scheduler console application
                   that automated data processing tasks such as data dumping,
-                  file writing, SAP integration via SFTP, and table updates
-                  using LINQ; saved 25 hours per week and improved overall
-                  operational efficiency.
+                  file writing, multithreading, SAP integration via SFTP, and
+                  table updates using LINQ; saved 25 hours per week and improved
+                  overall operational efficiency.
                 </li>
                 <li>
                   Directed seamless integration through Web APIs, efficiently
@@ -53,10 +104,6 @@ export function Experience() {
                   25% increase in user engagement and satisfaction.
                 </li>
                 <li>
-                  Boosted application performance with strategic optimizations,
-                  achieving an impressive 20% enhancement in page load times.
-                </li>
-                <li>
                   Implemented Gantt Chart functionality through code flexibility
                   and Scheduled Work Orders on the Gantt chart utilizing jQuery,
                   Ajax, JavaScript, C#, and .NET to increase task management
@@ -70,7 +117,7 @@ export function Experience() {
         <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
           <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
             <div className="font-bold text-xl">
-              Smart Energy Water | Software Engineer Intern
+              Smart Energy Water | Product Engineer Intern
             </div>
             <div className="font-semibold text-lg text-gray-500">
               Noida, UP | Jan 2021 - Jun 2021
@@ -78,7 +125,13 @@ export function Experience() {
           </div>
           <div className="gap-1.5 flex flex-col text-[15px]">
             <div>
-              <ul style={{ listStyleType: "disc", paddingLeft: "40px" }}>
+              <ul
+                style={{
+                  listStyleType: "disc",
+                  paddingLeft: "40px",
+                  textAlign: "justify",
+                }}
+              >
                 <li>
                   Developed and optimized ASP.NET webpages utilizing HTML, CSS,
                   JavaScript, jQuery, and Bootstrap, resulting in accelerated
@@ -89,16 +142,18 @@ export function Experience() {
                   create visually appealing and interactive graphs.
                 </li>
                 <li>
+                  Resolved frontend bugs and issues by conducting thorough code
+                  reviews and implementing effective debugging strategies
+                  resulting in a 30% improvement in overall system stability.
+                </li>
+                <li>
                   Created map using LeafletJS with marker clustering and lasso
                   functionality for effective visualization of geographical data
                   thereby increasing user interactivity by 20%.
                 </li>
-                It schedules approximately 300 work orders daily, saving 4-5
-                hours of manual work compared to earlier processes.
                 <li>
-                  Resolved frontend bugs and issues by conducting thorough code
-                  reviews and implementing effective debugging strategies
-                  resulting in a 30% improvement in overall system stability.
+                  Boosted application performance with strategic optimizations,
+                  achieving an impressive 20% enhancement in page load times.
                 </li>
               </ul>
             </div>

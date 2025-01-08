@@ -4,7 +4,7 @@ import { LinkedInIcon } from './assets/components/LinkedInIcon';
 import { GithubIcon } from './assets/components/GithubIcon';
 import { Experience } from './assets/components/Experience';
 import { Projects } from './assets/components/Projects';
-import purpleGradient from './assets/images/purplegradientBest.png';
+import profilePic from './assets/images/profile-pic.png';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             <div className='flex justify-center '>
               <div className=" rounded-full h-64 w-64 mt-1 mr-2 flex justify-center">
               <div className=" h-full text-xl flex flex-col justify-center">
-                <img src={purpleGradient} alt="Jatin" />
+                <img src={profilePic} alt="Jatin" />
               </div>
           </div>
           </div>
@@ -29,7 +29,7 @@ function App() {
           </div>
           <div></div>
           <div className=' flex justify-center items-center text-gray-500 text-base font-bold text-center'>
-          Visionary Full-Stack Developer | Harnessing Technology to Drive Business Transformation | Committed to Building User-Centric, Scalable, and Future-Ready Applications
+          Visionary Full-Stack Developer | Harnessing Technology to Drive Business Transformation | Committed to Building User-Centric, Scalable & Future-Ready Applications
           </div>
           {/* ============= */}
           <div className="flex justify-center gap-6 my-6">
