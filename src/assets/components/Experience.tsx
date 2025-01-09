@@ -1,6 +1,7 @@
 export function Experience() {
   return (
     <>
+    <div className="h-8"></div>
       <div
         id="experience"
         className="flex flex-col bg-[#FAFAFA] items-center px-4 sm:px-6 md:px-8 justify-center scroll-my-10"
