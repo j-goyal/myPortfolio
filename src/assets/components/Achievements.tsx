@@ -8,7 +8,7 @@ export function Achievements() {
           <div className="w-full lg:w-[980px] items-start font-extrabold text-gray-500 text-2xl mt-8 mb-3 sm:mt-10 sm:mb-5 px-4">
             ACHIEVEMENTS & AWARDS
           </div>
-          <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-6 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+          <div className="bg-white flex flex-col font-math w-full lg:w-[950px] shadow-md rounded-3xl py-6 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
             <div className="gap-1.5 flex flex-col text-[15px]">
               <div>
                 <ul

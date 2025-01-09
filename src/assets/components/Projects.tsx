@@ -14,7 +14,7 @@ export function Projects() {
         <div className="w-full lg:w-[980px] items-start font-extrabold text-gray-500 text-2xl mt-8 mb-3 sm:mt-10 sm:mb-5 px-4">
           PROJECTS
         </div>
-        <div className="bg-[#F7F7F7] flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+        <div className="bg-[#F7F7F7] flex flex-col font-math w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
           <div className="font-bold text-xl">TextUtils: Do Fun With Text.</div>
           <div className="flex gap-2 lg:gap-8 flex-col lg:flex-row mt-3">
             <div className="flex-grow">
@@ -61,7 +61,7 @@ export function Projects() {
           </div>
         </div>
         {/* ========================================================================== */}
-        <div className="bg-[#F7F7F7] flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+        <div className="bg-[#F7F7F7] flex flex-col font-math w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
           <div className="font-bold text-xl">
             QuestQuizzy: Engaging Quiz Platform.
           </div>

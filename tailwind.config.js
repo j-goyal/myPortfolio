@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        math: ['math', 'sans-serif'],
+      },
       colors: {
         'regal-grey': '#6A7280',
       }

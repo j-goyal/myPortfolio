@@ -8,7 +8,7 @@ export function Experience() {
         <div className="w-full lg:w-[980px] items-start font-extrabold text-gray-500 text-2xl mt-8 mb-3 sm:mt-10 sm:mb-5 px-4">
           PROFESSIONAL EXPERIENCE
         </div>
-        <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+        <div className="bg-white flex flex-col font-math w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
           <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
             <div className="font-bold text-xl">
               FNF India Private Limited | Software Developer
@@ -65,21 +65,21 @@ export function Experience() {
                     }}
                   >
                     <li>
-                      <span className="font-medium">Control Panel:</span>{" "}
+                      <span className="underline">Control Panel:</span>{" "}
                       Managed tenant data for 100+ clients.
                     </li>
                     <li>
-                      <span className="font-medium">Admin Panel:</span>{" "}
+                      <span className="underline">Admin Panel:</span>{" "}
                       Facilitated seamless creation and configuration for new
                       tenants.
                     </li>
                     <li>
-                      <span className="font-medium">Marketing Center:</span>{" "}
+                      <span className="underline">Marketing Center:</span>{" "}
                       Delivered tenant-specific websites, supporting marketing
                       efforts across various real estate agencies.
                     </li>
                     <li>
-                      <span className="font-medium">.NET Backend:</span>{" "}
+                      <span className="underline">.NET Backend:</span>{" "}
                       Developed and maintained microservices-based architecture,
                       integrating multiple API projects for scalability and
                       efficient backend operations.
@@ -91,7 +91,7 @@ export function Experience() {
           </div>
         </div>
         {/* ================================================ */}
-        <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+        <div className="bg-white flex flex-col font-math w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
           <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
             <div className="font-bold text-xl">
               Smart Energy Water | Product Engineer
@@ -159,7 +159,7 @@ export function Experience() {
           </div>
         </div>
         {/* ================================================ */}
-        <div className="bg-white flex flex-col w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+        <div className="bg-white flex flex-col font-math w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
           <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
             <div className="font-bold text-xl">
               Smart Energy Water | Product Engineer Intern
