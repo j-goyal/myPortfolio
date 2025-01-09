@@ -1,4 +1,8 @@
 import { ImageWithPlaceholder } from "./ImageWithPlaceholder";
+import textUtilsGif from "../images/TextUtils.gif";
+import textUtilsImg from "../images/TextUtils.png";
+import questQuizzyGif from "../images/QuestQuizzy.gif";
+import questQuizzyImg from "../images/QuestQuizzy.png";
 
 export function Projects() {
   return (
@@ -15,9 +19,9 @@ export function Projects() {
           <div className="flex gap-2 lg:gap-8 flex-col lg:flex-row mt-3">
             <div className="flex-grow">
               <ImageWithPlaceholder
-                src="/src/assets/images/TextUtils.gif"
+                src={textUtilsGif}
                 alt="TextUtils"
-                placeholderSrc="/src/assets/images/TextUtils.png"
+                placeholderSrc={textUtilsImg}
               />
             </div>
             <div className="flex flex-col gap-4 lg:w-[700px] font-light mt-2 justify-evenly">
@@ -64,14 +68,14 @@ export function Projects() {
           <div className="flex gap-2 lg:gap-8 flex-col lg:flex-row mt-3">
             <div className="flex-grow">
               <ImageWithPlaceholder
-                src="/src/assets/images/QuestQuizzy.gif"
+                src={questQuizzyGif}
                 alt="QuestQuizzy"
-                placeholderSrc="/src/assets/images/QuestQuizzy.png"
+                placeholderSrc={questQuizzyImg}
               />
             </div>
             <div className="flex flex-col gap-4 lg:w-[700px] font-light mt-2 justify-evenly">
               <div className="text-justify">
-                A quiz platform designed to deliver a personalized experience,
+                Quiz platform designed to deliver personalized experience,
                 featuring a dynamic countdown timer that transitions through
                 colors (green → yellow → red) as time dwindles, enhancing
                 urgency and excitement. With the added ability to review
