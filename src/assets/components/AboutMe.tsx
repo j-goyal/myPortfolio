@@ -1,7 +1,7 @@
 import { Skills } from "./Skills";
 import { LinkedInIcon } from "./LinkedInIcon";
 import { GithubIcon } from "./GithubIcon";
-import profilePic from "../images/profile-pic.png";
+import profilePic from "../images/profile-pic.webp";
 
 export function AboutMe() {
   return (
