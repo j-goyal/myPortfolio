@@ -15,7 +15,7 @@ export function AboutMe() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center py-3 text-regal-grey">
+          <div className="flex justify-center text-center flex-col items-center py-3 text-regal-grey">
             <div className="text-3xl font-bold">Hi, I'm Jatin.</div>
             <div className="text-lg">
               <span className="font-medium">J</span>udicious,
