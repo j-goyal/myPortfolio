@@ -1,8 +1,8 @@
-import { ImageWithPlaceholder } from "./ImageWithPlaceholder";
-import textUtilsGif from "../images/TextUtils.gif";
-import textUtilsImg from "../images/TextUtils.png";
-import questQuizzyGif from "../images/QuestQuizzy.gif";
-import questQuizzyImg from "../images/QuestQuizzy.png";
+import textUtilsWebm from "../images/TextUtils.webm";
+import textUtilsImg from "../images/TextUtils.webp";
+import questQuizzyWebm from "../images/QuestQuizzy.webm";
+import questQuizzyImg from "../images/QuestQuizzy.webp";
+import { VideoWithPlaceholder } from "./VideoWithPlaceholder";
 
 export function Projects() {
   return (
@@ -18,18 +18,19 @@ export function Projects() {
           <div className="font-bold text-xl">TextUtils: Do Fun With Text.</div>
           <div className="flex gap-2 lg:gap-8 flex-col lg:flex-row mt-3">
             <div className="flex-grow">
-              <ImageWithPlaceholder
-                src={textUtilsGif}
+              <VideoWithPlaceholder
+                src={textUtilsWebm}
                 alt="TextUtils"
                 placeholderSrc={textUtilsImg}
               />
             </div>
             <div className="flex flex-col gap-4 lg:w-[700px] font-light mt-2 justify-evenly">
               <div className="text-justify">
-                A simple project to create a text utility web application that
-                enabled users to perform a range of text operations and also
-                features theme customization, allowing users to personalize the
-                appearance for a more engaging and user-friendly experience.
+                Text utility web application that enables users to perform text
+                operations such as converting to uppercase/lowercase and
+                manipulating text (e.g., removing spaces, extracting numbers),
+                with theme customization to personalize the appearance for a
+                more engaging and user-friendly experience.
               </div>
               <div className="flex-wrap flex gap-2 mt-1">
                 <div className="bg-gray-200 rounded-lg items-center justify-center flex px-4 py-0.5 text-sm">
@@ -67,8 +68,8 @@ export function Projects() {
           </div>
           <div className="flex gap-2 lg:gap-8 flex-col lg:flex-row mt-3">
             <div className="flex-grow">
-              <ImageWithPlaceholder
-                src={questQuizzyGif}
+              <VideoWithPlaceholder
+                src={questQuizzyWebm}
                 alt="QuestQuizzy"
                 placeholderSrc={questQuizzyImg}
               />
