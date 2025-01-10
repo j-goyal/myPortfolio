@@ -1,7 +1,7 @@
 export function Experience() {
   return (
     <>
-    <div className="h-8"></div>
+      <div className="h-8"></div>
       <div
         id="experience"
         className="flex flex-col bg-[#FAFAFA] items-center px-4 sm:px-6 md:px-8 justify-center scroll-my-10"
@@ -28,10 +28,10 @@ export function Experience() {
                 }}
               >
                 <li>
-                  Implemented Google SAML SSO using .NET WebAPI and Next.js,
-                  enhancing authentication efficiency for 100% of users with
-                  Safe Token management, leveraging Access Tokens and Refresh
-                  Tokens stored in both DB and Redis, and encrypting
+                  Implemented SSO (Google SAML, JWT, Custom) using .NET WebAPI
+                  and Next.js, enhancing authentication efficiency for 100% of
+                  users with Safe Token management, leveraging Access Tokens and
+                  Refresh Tokens stored in both DB and Redis, and encrypting
                   AccessTokens with RSA encryption for added security.
                 </li>
                 <li>
@@ -66,8 +66,8 @@ export function Experience() {
                     }}
                   >
                     <li>
-                      <span className="underline">Control Panel:</span>{" "}
-                      Managed tenant data for 100+ clients.
+                      <span className="underline">Control Panel:</span> Managed
+                      tenant data for 100+ clients.
                     </li>
                     <li>
                       <span className="underline">Admin Panel:</span>{" "}
@@ -80,8 +80,8 @@ export function Experience() {
                       efforts across various real estate agencies.
                     </li>
                     <li>
-                      <span className="underline">.NET Backend:</span>{" "}
-                      Developed and maintained microservices-based architecture,
+                      <span className="underline">.NET Backend:</span> Developed
+                      and maintained microservices-based architecture,
                       integrating multiple API projects for scalability and
                       efficient backend operations.
                     </li>
