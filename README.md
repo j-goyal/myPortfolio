@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+# 🏆 Jatin's Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio website! 🚀 This is where I showcase my journey as a **Full-Stack Developer** and highlight my skills, experience, and achievements. Explore my projects, learn about my background, and get in touch!
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 👨‍💻 About Me
+A snapshot of who I am, my professional values, and the vision driving my work in software development.
 
-## Expanding the ESLint configuration
+### 🛠️ My Skills
+A detailed overview of the tools, technologies, and programming languages I excel in, including:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend:** JavaScript, React, Next.js, TypeScript, jQuery, HTML, CSS, Bootstrap, Tailwind
+- **Backend:** .NET Core, Web APIs, C#, MVC, Microservices
+- **Database:** SQL Server, Redis, MongoDB
+- **Others:** Git, Redux, Postman, Visual Studio
 
-- Configure the top-level `parserOptions` property like this:
+### 💼 My Professional Experience
+A timeline of my career journey, highlighting the organizations I've worked with and contributed to.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### 📂 My Projects
+An interactive showcase of the most significant personal projects I've worked on, including:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **TextUtils: Do Fun With Text**: Text Utility web application for various text operations.
+- **QuestQuizzy: Engaging Quiz Platform**: Quiz platform designed to deliver personalized experience.
+
+### 🏅 My Awards & Achievements
+Recognition for my contributions and achievements in software development.
+
+### 🔗 Quick Links
+- [Visit My Website](https://jating07925.vercel.app/)
+- [Connect with Me on LinkedIn](https://www.linkedin.com/in/jatin263/)
+- [Follow Me on GitHub](https://github.com/j-goyal)
+- [Email Me](mailto:jating07925@gmail.com)
+
+## 💡 Tech Stack
+This portfolio is built using:
+
+- **Frontend:** React, TypeScript and Vite
+- **Styling:** Tailwind CSS
+- **Hosting:** Vercel
+
+## 📬 Get in Touch
+I'm always excited to collaborate on innovative projects or discuss new opportunities. Feel free to connect with me using the links above!
+
+---
+
+⚡ *"Code is not just code; it's the foundation of dreams turned into reality."* – Jatin
