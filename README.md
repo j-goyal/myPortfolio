@@ -21,8 +21,8 @@ A timeline of my career journey, highlighting the organizations I've worked with
 ### 📂 My Projects
 An interactive showcase of the most significant personal projects I've worked on, including:
 
-- **TextUtils: Do Fun With Text**: Text Utility web application for various text operations.
-- **QuestQuizzy: Engaging Quiz Platform**: Quiz platform designed to deliver personalized experience.
+- **TextUtils**: Do Fun With Text.
+- **QuestQuizzy**: Engaging Quiz Platform.
 
 ### 🏅 My Awards & Achievements
 Recognition for my contributions and achievements in software development.
