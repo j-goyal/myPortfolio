@@ -17,7 +17,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "QuickResume: Create Resumes with Ease.",
+    title: "QuickResume: Simplify Your Resume.",
     description:
       "QuickResume is a comprehensive platform for crafting personalized resumes, offering features like JSON saving/loading, sharing links, PDF export, customizable templates, drag and rearrange sections, autosaving, adding/removing sections, undo functionality. Perfect for creating polished, professional resumes effortlessly.",
     technologies: [
