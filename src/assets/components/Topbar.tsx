@@ -79,7 +79,7 @@ export function TopBar() {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 w-full bg-white shadow-md z-40">
+        <div className="absolute top-14 left-0 w-full bg-white shadow-lg z-40">
           <div className="flex flex-col items-center py-4 gap-5">
             <NavItems activeSection={activeSection} onItemClick={closeMenu} />
             <Resume />

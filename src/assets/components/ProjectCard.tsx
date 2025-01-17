@@ -17,7 +17,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   videoSrc,
   placeholderSrc,
 }) => (
-  <div className="bg-[#F7F7F7] flex flex-col font-math w-full lg:w-[950px] shadow-md rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+  <div className="bg-[#F7F7F7] flex flex-col font-math w-full lg:w-[950px] shadow-lg rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
     <div className="font-bold text-xl">{title}</div>
     <div className="flex gap-2 lg:gap-8 flex-col lg:flex-row mt-3">
       <div className="flex-grow">
@@ -39,14 +39,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           ))}
         </div>
-        <button
-          aria-label="Check it out"
-          type="button"
-          className="w-60 py-2.5 px-5 text-sm font-medium rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-100 bg-gray-800 text-white border-gray-600 hover:bg-gray-700"
-          onClick={() => window.open(link, "_blank")}
-        >
-          Check it out!
-        </button>
+        <div className="flex items-center">
+          <button
+            aria-label="Check it out"
+            type="button"
+            className="w-60 py-2.5 px-5 text-sm font-medium rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-100 bg-gray-800 text-white border-gray-600 hover:bg-gray-700"
+            onClick={() => window.open(link, "_blank")}
+          >
+            Check it out!
+          </button>
+        </div>
       </div>
     </div>
   </div>
