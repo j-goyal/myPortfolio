@@ -1,4 +1,3 @@
-import { Skills } from "./Skills";
 import { LinkedInIcon } from "./LinkedInIcon";
 import { GithubIcon } from "./GithubIcon";
 import { WorkWithMe } from "./WorkWithMe";
@@ -19,7 +18,6 @@ export function AboutMe() {
             </div>
             <WorkWithMe/>
           </div>
-          <Skills />
         </div>
       </div>
     </>

@@ -1,0 +1,55 @@
+import {
+  FaReact,
+  FaHtml5,
+  FaGitAlt,
+  FaBootstrap,
+  FaDatabase,
+  FaGithub,
+  FaBitbucket,
+  FaLaptopCode,
+  FaNetworkWired,
+  FaCubes,
+  FaCode,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiDotnet,
+  SiMongodb,
+  SiPostman,
+  SiJquery,
+  SiTailwindcss,
+  SiMui,
+  SiNextdotjs,
+  SiCplusplus,
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { DiVisualstudio } from "react-icons/di";
+import { VscVscode } from "react-icons/vsc";
+
+export const skillData = [
+  { name: "C#", icon: <TbBrandCSharp className="text-purple-700" /> },
+  { name: ".NET Core", icon: <SiDotnet className="text-purple-700" /> },
+  { name: "Web APIs", icon: <FaNetworkWired className="text-blue-600" /> },
+  { name: "Microservices", icon: <FaCubes className="text-green-600" /> },
+  { name: "LINQ", icon: <FaCode className="text-blue-500" /> },
+  { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-blue-700" /> },
+  { name: "React.js", icon: <FaReact className="text-blue-500" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
+  { name: "jQuery", icon: <SiJquery className="text-blue-400" /> },
+  { name: "Web Development", icon: <FaLaptopCode className="text-teal-400" /> },
+  { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
+  { name: "Material UI", icon: <SiMui className="text-blue-500" /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500" /> },
+  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
+  { name: "SQL Server", icon: <FaDatabase className="text-blue-600" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
+  { name: "C++", icon: <SiCplusplus className="text-blue-700" /> },
+  { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+  { name: "Visual Studio", icon: <DiVisualstudio className="text-purple-700" />},
+  { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
+  { name: "Bitbucket", icon: <FaBitbucket className="text-blue-500" /> },
+  { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+  { name: "Github", icon: <FaGithub className="text-black" /> },
+];

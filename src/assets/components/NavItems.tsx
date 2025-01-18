@@ -18,6 +18,15 @@ export function NavItems({
       </a>
       <a
         className={`hover:cursor-pointer hover:text-purple-900 ${
+          (activeSection === "Skills") ? "text-purple-900" : ""
+        }`}
+        href="#Skills"
+        onClick={() => onItemClick?.()}
+      >
+        Skills
+      </a>
+      <a
+        className={`hover:cursor-pointer hover:text-purple-900 ${
           activeSection === "experience" ? "text-purple-900" : ""
         }`}
         href="#experience"
@@ -41,7 +50,7 @@ export function NavItems({
         href="#achievements"
         onClick={() => onItemClick?.()}
       >
-        Achievements & Awards
+        Awards
       </a>
     </div>
   );

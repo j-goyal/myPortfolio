@@ -45,7 +45,7 @@ export function TopBar() {
   }, [activeSection]);
 
   return (
-    <div className="bg-[#fafafa] fixed top-0 left-0 w-full z-50 shadow h-14 flex justify-between px-4 sm:px-6 md:px-8 items-center">
+    <div className="bg-[#f8f8f8] fixed top-0 left-0 w-full z-50 shadow h-14 flex justify-between px-4 sm:px-6 md:px-8 items-center">
       <Logo resetActiveSection={resetActiveSection} />
 
       <div className="hidden md:flex items-center">
