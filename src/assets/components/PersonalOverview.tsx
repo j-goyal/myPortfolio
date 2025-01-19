@@ -12,7 +12,7 @@ export function PersonalOverview() {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="text-6xl font-extrabold text-center">
+        <div className="text-5xl font-extrabold text-center">
           Software Developer.
         </div>
       </div>

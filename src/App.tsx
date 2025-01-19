@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="scroll-smooth">
       <TopBar />
-      <main className="pt-16 #f8f8f8 h-full">
+      <main className="pt-16 #f6f6f6 h-full">
         <AboutMe/>
         <Skills/>
         <Experience />

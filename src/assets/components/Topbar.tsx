@@ -45,7 +45,7 @@ export function TopBar() {
   }, [activeSection]);
 
   return (
-    <div className="bg-[#f8f8f8] fixed top-0 left-0 w-full z-50 shadow h-14 flex justify-between px-4 sm:px-6 md:px-8 items-center">
+    <div className="bg-[#f6f6f6] fixed top-0 left-0 w-full z-50 shadow h-14 flex justify-between px-4 sm:px-6 md:px-8 items-center">
       <Logo resetActiveSection={resetActiveSection} />
 
       <div className="hidden md:flex items-center">
@@ -79,7 +79,7 @@ export function TopBar() {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 w-full bg-white shadow-lg z-40">
+        <div className="absolute top-14 left-0 w-full bg-[#f6f6f6] shadow-lg z-40">
           <div className="flex flex-col items-center py-4 gap-5">
             <NavItems activeSection={activeSection} onItemClick={closeMenu} />
             <Resume />
