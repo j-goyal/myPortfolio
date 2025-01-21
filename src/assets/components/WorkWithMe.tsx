@@ -4,7 +4,7 @@ export function WorkWithMe() {
       <button
         aria-label="Email Me"
         className="bg-black hover:shadow-lg h-11 hover:bg-slate-800
-           text-white text-md rounded-lg py-2 px-8"
+           text-white rounded-lg py-2 px-8 text-md"
         onClick={() => window.open("mailto:jating07925@gmail.com", "_blank")}
       >
         Work with me -&gt;

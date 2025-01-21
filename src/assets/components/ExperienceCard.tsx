@@ -6,7 +6,7 @@ interface ExperienceCardProps {
 
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div className="bg-[#f6f6f6] flex flex-col font-math w-full lg:w-[950px] shadow-lg rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
+    <div className="bg-[#f9f9f9] flex flex-col font-math w-full lg:w-[950px] shadow-lg rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
       <div className="flex justify-between md:gap-2 items-baseline flex-col md:flex-row">
         <div className="font-bold text-xl">{experience.title}</div>
         <div className="font-semibold text-lg text-gray-500">{experience.duration}</div>
