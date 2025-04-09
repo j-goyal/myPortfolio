@@ -1,3 +1,4 @@
+import { LINKEDIN_PROFILE_LINK } from "../constants/constants";
 export function LinkedInIcon() {
   return (
     <>
@@ -5,7 +6,7 @@ export function LinkedInIcon() {
         className="text-[#2167b8] hover:text-[#2167b8dc] hover:cursor-pointer
                flex-col justify-center"
         onClick={() =>
-          window.open("https://www.linkedin.com/in/jatin263/", "_blank")
+          window.open(LINKEDIN_PROFILE_LINK, "_blank")
         }
       >
         <svg

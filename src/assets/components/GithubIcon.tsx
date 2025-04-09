@@ -1,3 +1,4 @@
+import { GITHUB_PROFILE_LINK } from "../constants/constants";
 export function GithubIcon() {
   return (
     <>
@@ -5,7 +6,7 @@ export function GithubIcon() {
       <div
         className="text-[#232324] hover:text-[#232324dc] hover:cursor-pointer
                  flex-col justify-center"
-        onClick={() => window.open("https://github.com/j-goyal", "_blank")}
+        onClick={() => window.open(GITHUB_PROFILE_LINK, "_blank")}
       >
         <svg
           stroke="currentColor"

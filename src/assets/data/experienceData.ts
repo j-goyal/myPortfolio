@@ -10,6 +10,9 @@ export const experienceData: ExperienceDetail[] = [
           text: "Implemented SSO (Google SAML, JWT, Custom) using .NET WebAPI and Next.js, enhancing authentication efficiency for 100% of users with Safe Token management, leveraging Access Tokens and Refresh Tokens stored in both DB and Redis, and encrypting AccessTokens with RSA encryption for added security.",
         },
         {
+          text: "Implemented robust Stripe Subscription Management in .NET WebAPI + Next.js stack, covering Customers, Payment Methods, Products, Coupons, and Subscriptions, including secure Stripe Webhook handling to automate real-time billing events, impacting 100% of paying users and streamlining recurring payment operations.",
+        },
+        {
           text: "Engineered a robust password-compliance system using Formik and Yup to enforce enterprise-grade security policies incorporating advanced validations (complexity, dictionary checks, and password history) to safeguard user accounts and reduce password-related breaches by 35%.",
         },
         {

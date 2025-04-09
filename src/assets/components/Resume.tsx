@@ -1,3 +1,4 @@
+import { RESUME_SHAREABLE_LINK } from "../constants/constants";
 export function Resume() {
   return (
     <div className="flex items-center">
@@ -6,7 +7,7 @@ export function Resume() {
         className=" h-9 bg-black gap-2 flex items-center hover:shadow-lg hover:bg-slate-800 text-white font-semibold text-sm  px-4 sm:px-6 rounded-lg"
         onClick={() =>
           window.open(
-            "https://drive.google.com/file/d/1tik6FFaZW-SGTjDqTcs8bB-H442stcoh/view?usp=sharing",
+            RESUME_SHAREABLE_LINK,
             "_blank"
           )
         }
