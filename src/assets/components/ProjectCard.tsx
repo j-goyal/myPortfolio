@@ -1,7 +1,7 @@
 import type React from "react";
 import { useState } from "react";
 import { VideoWithPlaceholder } from "./VideoWithPlaceholder";
-import { ArrowUpRight } from "lucide-react";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface ProjectCardProps {
   title: string;
@@ -75,7 +75,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   onClick={() => window.open(link, "_blank")}
                 >
                   Check it out!
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <FiArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </div>
             </div>

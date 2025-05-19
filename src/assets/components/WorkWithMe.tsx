@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { FiArrowUpRight } from "react-icons/fi";
 import { WORK_WITH_ME_EMAIL } from "../constants/constants";
 
 export function WorkWithMe() {
@@ -11,7 +11,7 @@ export function WorkWithMe() {
         onClick={() => window.open(`mailto:${WORK_WITH_ME_EMAIL}`, "_blank")}
       >
         Work with me
-        <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <FiArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </button>
     </div>
   );
