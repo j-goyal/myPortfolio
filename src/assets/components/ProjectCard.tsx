@@ -1,4 +1,7 @@
+import type React from "react";
+import { useState } from "react";
 import { VideoWithPlaceholder } from "./VideoWithPlaceholder";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -7,6 +10,7 @@ interface ProjectCardProps {
   link: string;
   videoSrc: string;
   placeholderSrc: string;
+  isLast?: boolean;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -16,40 +20,68 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
   videoSrc,
   placeholderSrc,
-}) => (
-  <div className="bg-[#f9f9f9] flex flex-col font-math w-full lg:w-[950px] shadow-lg rounded-3xl py-10 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
-    <div className="font-bold text-xl">{title}</div>
-    <div className="flex gap-2 lg:gap-8 flex-col lg:flex-row mt-3">
-      <div className="flex-grow">
-        <VideoWithPlaceholder
-          src={videoSrc}
-          alt={title}
-          placeholderSrc={placeholderSrc}
-        />
-      </div>
-      <div className="flex flex-col gap-4 lg:w-[700px] font-light mt-2 justify-evenly">
-        <div className="text-justify">{description}</div>
-        <div className="flex-wrap flex gap-2 mt-1">
-          {technologies.map((tech, index) => (
-            <div
-              key={index}
-              className="bg-gray-200 rounded-lg items-center justify-center flex px-4 py-0.5 text-sm"
-            >
-              {tech}
+  isLast = false,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div className="relative font-math">
+      <div className="absolute left-0 md:left-8 top-8 w-4 h-4 rounded-full bg-white border-2 border-gray-400 z-10 transform -translate-x-1/2 hidden md:block"></div>
+
+      {!isLast && (
+        <div className="absolute left-0 md:left-8 top-12 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2 hidden md:block"></div>
+      )}
+
+      <div
+        className={`ml-0 md:ml-16 bg-white rounded-3xl shadow-lg transition-all duration-300 overflow-hidden ${
+          isHovered ? "shadow-2xl transform -translate-y-1" : ""
+        }`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400"></div>
+
+        <div className="p-6 sm:p-8">
+          <h3 className="font-bold text-xl text-gray-800 mb-6">{title}</h3>
+
+          <div className="flex gap-6 lg:gap-8 flex-col lg:flex-row">
+            <div className="flex-grow lg:w-1/2 overflow-hidden rounded-lg ">
+              <VideoWithPlaceholder
+                src={videoSrc}
+                alt={title}
+                placeholderSrc={placeholderSrc}
+              />
             </div>
-          ))}
-        </div>
-        <div className="flex items-center">
-          <button
-            aria-label="Check it out"
-            type="button"
-            className="w-60 py-2.5 px-5 text-sm font-medium rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-100 bg-gray-800 text-white border-gray-600 hover:bg-gray-700"
-            onClick={() => window.open(link, "_blank")}
-          >
-            Check it out!
-          </button>
+
+            <div className="flex flex-col gap-5 lg:w-1/2 justify-between">
+              <p className="text-gray-800 text-justify">{description}</p>
+
+              <div className="space-y-5">
+                <div className="flex flex-wrap gap-2">
+                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="bg-gray-200 text-gray-800 rounded-full px-4 py-1.5 text-sm font-medium hover:bg-gray-300 transition-colors"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <button
+                  aria-label="Check it out"
+                  type="button"
+                  className="flex items-center gap-2 py-2.5 px-5 text-sm font-medium rounded-lg border bg-gray-950 text-white border-gray-600 hover:bg-gray-700 transition-colors w-fit group"
+                  onClick={() => window.open(link, "_blank")}
+                >
+                  Check it out!
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};

@@ -1,36 +1,37 @@
 export function Achievements() {
-    return (
-      <>
-        <div
-          id="achievements"
-          className="flex flex-col items-center px-4 justify-center scroll-my-10"
-        >
-          <div className="w-full lg:w-[980px] items-start font-extrabold text-gray-500 text-2xl mt-8 mb-3 sm:mt-10 sm:mb-5 px-4">
-            ACHIEVEMENTS & AWARDS
-          </div>
-          <div className="bg-[#f9f9f9] flex flex-col font-math w-full lg:w-[950px] shadow-lg rounded-3xl py-6 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
-            <div className="gap-1.5 flex flex-col text-[15px]">
-              <div>
-                <ul
-                  style={{
-                    listStyleType: "disc",
-                    paddingLeft: "40px",
-                    textAlign: "justify",
-                  }}
-                >
-                  <li>
-                  Pat on the Back Award (06/2023), Excellence Award (06/2022) at Smart Energy Water.
-                  </li>
-                  <li>
-                  Recipient of Merit Scholarship in 1st, and 3rd Year for Top 10% students of my branch based on CGPA at Thapar Institute of Engineering and Technology.
-                  </li>
-                </ul>
+  const achievements = [
+    "Pat on the Back Award (06/2023), Excellence Award (06/2022) at Smart Energy Water.",
+    "Recipient of Merit Scholarship in 1st, and 3rd Year for Top 10% students of my branch based on CGPA at Thapar Institute of Engineering and Technology.",
+  ]
+
+  return (
+    <div
+      id="achievements"
+      className="flex flex-col items-center px-4 sm:px-6 md:px-8 justify-center scroll-my-10 py-12"
+    >
+      <div className="w-full lg:w-[980px] flex flex-col items-start">
+        <h2 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-500 text-2xl mb-2">
+          ACHIEVEMENTS & AWARDS
+        </h2>
+        <div className="h-1 w-24 bg-gradient-to-r from-gray-700 to-gray-400 rounded-full mb-8"></div>
+      </div>
+
+      <div className="w-full lg:w-[950px] bg-white rounded-3xl shadow-lg overflow-hidden font-math">
+        <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400"></div>
+
+        <div className="p-6 sm:p-8">
+          <div className="space-y-4">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="group flex items-start gap-3">
+                <div className="mt-1.5 min-w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
+                  <div className="w-2.5 h-2.5 rounded-full bg-gray-500 group-hover:bg-gray-700 transition-colors"></div>
+                </div>
+                <p className="text-gray-800 group-hover:text-gray-950 transition-colors text-justify">{achievement}</p>
               </div>
-            </div>
+            ))}
           </div>
-          <div className="h-6"></div>
         </div>
-      </>
-    );
-  }
-  
+      </div>
+    </div>
+  )
+}

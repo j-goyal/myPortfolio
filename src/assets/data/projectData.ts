@@ -26,7 +26,7 @@ export const projectData: Project[] = [
   {
     title: "TextUtils: Do Fun With Text.",
     description:
-      "Text utility web application that enables users to perform text operations such as converting to uppercase/lowercase and manipulating text (e.g., removing spaces, extracting numbers), with theme customization to personalize the appearance for a more engaging and user-friendly experience.",
+      "Text utility web application that enables users to perform range of text operations such as converting to uppercase/lowercase and manipulating text (e.g., removing spaces, extracting numbers), with theme customization to personalize the appearance for a more engaging and user-friendly experience.",
     technologies: ["React", "JavaScript", "Bootstrap CSS", "HTML"],
     link: "https://j-goyal.github.io/TextUtils-React/",
     videoSrc: textUtilsWebm,
@@ -36,7 +36,7 @@ export const projectData: Project[] = [
     title: "QuestQuizzy: Engaging Quiz Platform.",
     description:
       "Quiz platform designed to deliver personalized experience, featuring a dynamic countdown timer that transitions through colors (green → yellow → red) as time dwindles, enhancing urgency and excitement. With the added ability to review answers, it's an ideal choice for fun, interactive, and engaging learning sessions!",
-    technologies: ["React", "JavaScript", "HTML", "API", "Tailwind CSS"],
+    technologies: ["React", "Tailwind CSS", "JavaScript", "HTML", "API"],
     link: "https://jatins-questquizzy.vercel.app/",
     videoSrc: questQuizzyWebm,
     placeholderSrc: questQuizzyImg,

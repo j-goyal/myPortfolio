@@ -3,7 +3,7 @@ import { ExperienceDetail } from "../types/types";
 export const experienceData: ExperienceDetail[] = [
     {
       title: "FNF India Private Limited | Software Developer",
-      duration: "Remote | 16 Aug 2024 - Present",
+      duration: "16 Aug 2024 - Present",
       location: "Remote",
       responsibilities: [
         {
@@ -49,7 +49,7 @@ export const experienceData: ExperienceDetail[] = [
     },
     {
       title: "Smart Energy Water | Product Engineer",
-      duration: "Noida, UP | Jul 2021 - 14 Aug 2024",
+      duration: "Jul 2021 - 14 Aug 2024",
       location: "Noida, UP",
       responsibilities: [
         {
@@ -77,7 +77,7 @@ export const experienceData: ExperienceDetail[] = [
     },
     {
       title: "Smart Energy Water | Product Engineer Intern",
-      duration: "Noida, UP | Jan 2021 - Jun 2021",
+      duration: "Jan 2021 - Jun 2021",
       location: "Noida, UP",
       responsibilities: [
         {

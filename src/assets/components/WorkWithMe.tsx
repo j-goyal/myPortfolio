@@ -1,13 +1,17 @@
+import { ArrowUpRight } from "lucide-react";
+import { WORK_WITH_ME_EMAIL } from "../constants/constants";
+
 export function WorkWithMe() {
   return (
     <div className="flex justify-center items-center">
       <button
         aria-label="Email Me"
-        className="bg-black hover:shadow-lg h-11 hover:bg-slate-800
-           text-white rounded-lg py-2 px-8 text-md"
-        onClick={() => window.open("mailto:jating07925@gmail.com", "_blank")}
+        type="button"
+        className="text-md flex items-center gap-2 py-2.5 px-5 rounded-lg border bg-gray-950 text-white border-gray-600 hover:bg-gray-700 transition-colors w-fit group"
+        onClick={() => window.open(`mailto:${WORK_WITH_ME_EMAIL}`, "_blank")}
       >
-        Work with me -&gt;
+        Work with me
+        <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </button>
     </div>
   );

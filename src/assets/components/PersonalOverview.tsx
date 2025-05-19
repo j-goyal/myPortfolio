@@ -17,7 +17,7 @@ export function PersonalOverview() {
         </div>
       </div>
       <div></div>
-      <div className=" flex justify-center items-center text-gray-500 text-base font-bold text-center">
+      <div className="flex justify-center items-center text-gray-500 text-base font-bold text-center">
         Visionary Full-Stack Developer | Harnessing Technology For Business
         Transformation | Committed to Building User-Centric, Scalable &
         Future-Ready Applications

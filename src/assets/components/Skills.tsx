@@ -1,17 +1,20 @@
-import { skillData } from "../data/skillData";
+import { skillData } from "../data/skillData"
 
 export function Skills() {
   return (
-    <>
-      <div
-        id="Skills"
-        className="flex flex-col items-center px-4 justify-center scroll-my-10"
-      >
-        <div className="w-full lg:w-[980px] items-start font-extrabold text-gray-500 text-2xl mt-8 mb-3 sm:mt-10 sm:mb-5 px-4">
+    <div id="Skills" className="flex flex-col items-center px-4 sm:px-6 md:px-8 justify-center scroll-my-10 py-12">
+      <div className="w-full lg:w-[980px] flex flex-col items-start">
+        <h2 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-500 text-2xl mb-2">
           TECHNICAL SKILLS
-        </div>
-        <div className="bg-[#f9f9f9] flex flex-col w-full lg:w-[950px] shadow-lg rounded-3xl py-6 px-6 sm:px-8 md:px-12 gap-4 font-light text-md mb-8">
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-5 lg:gap-6">
+        </h2>
+        <div className="h-1 w-24 bg-gradient-to-r from-gray-700 to-gray-400 rounded-full mb-8"></div>
+      </div>
+
+      <div className="w-full lg:w-[950px] bg-white rounded-3xl shadow-lg overflow-hidden">
+        <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400"></div>
+
+        <div className="p-6 sm:p-8">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-5 lg:gap-6">
             {skillData.map((skill, index) => (
               <div
                 key={index}
@@ -25,8 +28,7 @@ export function Skills() {
             ))}
           </div>
         </div>
-        <div className="h-6"></div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
