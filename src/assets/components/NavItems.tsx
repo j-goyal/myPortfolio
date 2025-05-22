@@ -2,14 +2,16 @@ export function NavItems({
   activeSection,
   onItemClick,
 }: {
-  activeSection?: string;
-  onItemClick?: () => void;
+  activeSection?: string
+  onItemClick?: () => void
 }) {
   return (
     <div className="text-lg font-semibold gap-7 flex flex-col md:flex-row items-center">
       <a
-        className={`hover:cursor-pointer hover:text-purple-900 ${
-          (activeSection === "AboutMe" || activeSection === "") ? "text-purple-900" : ""
+        className={`hover:cursor-pointer hover:text-purple-900 dark:hover:text-purple-400 ${
+          activeSection === "AboutMe" || activeSection === ""
+            ? "text-purple-900 dark:text-purple-400"
+            : "dark:text-gray-300"
         }`}
         href="#AboutMe"
         onClick={() => onItemClick?.()}
@@ -17,8 +19,8 @@ export function NavItems({
         About Me
       </a>
       <a
-        className={`hover:cursor-pointer hover:text-purple-900 ${
-          (activeSection === "Skills") ? "text-purple-900" : ""
+        className={`hover:cursor-pointer hover:text-purple-900 dark:hover:text-purple-400 ${
+          activeSection === "Skills" ? "text-purple-900 dark:text-purple-400" : "dark:text-gray-300"
         }`}
         href="#Skills"
         onClick={() => onItemClick?.()}
@@ -26,8 +28,8 @@ export function NavItems({
         Skills
       </a>
       <a
-        className={`hover:cursor-pointer hover:text-purple-900 ${
-          activeSection === "experience" ? "text-purple-900" : ""
+        className={`hover:cursor-pointer hover:text-purple-900 dark:hover:text-purple-400 ${
+          activeSection === "experience" ? "text-purple-900 dark:text-purple-400" : "dark:text-gray-300"
         }`}
         href="#experience"
         onClick={() => onItemClick?.()}
@@ -35,8 +37,8 @@ export function NavItems({
         Experience
       </a>
       <a
-        className={`hover:cursor-pointer hover:text-purple-900 ${
-          activeSection === "projects" ? "text-purple-900" : ""
+        className={`hover:cursor-pointer hover:text-purple-900 dark:hover:text-purple-400 ${
+          activeSection === "projects" ? "text-purple-900 dark:text-purple-400" : "dark:text-gray-300"
         }`}
         href="#projects"
         onClick={() => onItemClick?.()}
@@ -44,8 +46,8 @@ export function NavItems({
         Projects
       </a>
       <a
-        className={`hover:cursor-pointer hover:text-purple-900 ${
-          activeSection === "achievements" ? "text-purple-900" : ""
+        className={`hover:cursor-pointer hover:text-purple-900 dark:hover:text-purple-400 ${
+          activeSection === "achievements" ? "text-purple-900 dark:text-purple-400" : "dark:text-gray-300"
         }`}
         href="#achievements"
         onClick={() => onItemClick?.()}
@@ -53,5 +55,5 @@ export function NavItems({
         Awards
       </a>
     </div>
-  );
+  )
 }

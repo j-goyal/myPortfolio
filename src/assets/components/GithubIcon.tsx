@@ -4,7 +4,7 @@ export function GithubIcon() {
     <>
       <div className="w-1"></div>
       <div
-        className="text-[#232324] hover:text-[#232324dc] hover:cursor-pointer
+        className="text-[#232324] dark:text-gray-300 hover:text-[#232324dc] dark:hover:text-gray-400 hover:cursor-pointer
                  flex-col justify-center"
         onClick={() => window.open(GITHUB_PROFILE_LINK, "_blank")}
       >

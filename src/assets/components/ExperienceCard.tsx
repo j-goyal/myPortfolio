@@ -1,5 +1,4 @@
 import type React from "react";
-
 import type { ExperienceDetail } from "../types/types";
 import { useState } from "react";
 
@@ -20,40 +19,42 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="absolute left-0 md:left-8 top-8 w-4 h-4 rounded-full bg-white border-2 border-gray-400 z-10 transform -translate-x-1/2 hidden md:block"></div>
+      <div className="absolute left-0 md:left-8 top-8 w-4 h-4 rounded-full bg-white dark:bg-gray-800 border-2 border-gray-400 dark:border-gray-600 z-10 transform -translate-x-1/2 hidden md:block"></div>
 
       {!isLast && (
-        <div className="absolute left-0 md:left-8 top-12 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2 hidden md:block"></div>
+        <div className="absolute left-0 md:left-8 top-12 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 transform -translate-x-1/2 hidden md:block"></div>
       )}
 
       <div
-        className={`ml-0 md:ml-16 bg-white rounded-3xl shadow-lg transition-all duration-300 overflow-hidden ${
+        className={`ml-0 md:ml-16 bg-white dark:bg-gray-800 rounded-3xl shadow-lg transition-all duration-300 overflow-hidden ${
           isHovered ? "shadow-2xl transform -translate-y-1" : ""
         }`}
       >
-        <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400"></div>
+        <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400 dark:from-gray-500 dark:to-gray-300"></div>
 
         <div className="p-6 sm:p-8">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-6">
             <div>
-              <h3 className="font-bold text-xl text-gray-800">
+              <h3 className="font-bold text-xl text-gray-800 dark:text-gray-100">
                 {experience.title}
               </h3>
-              <p className="text-gray-600 mt-1">{experience.location}</p>
+              <p className="text-gray-600 dark:text-gray-300 mt-1">
+                {experience.location}
+              </p>
             </div>
-            <div className="px-4 py-1.5 text-center bg-gray-200 rounded-full text-gray-600 font-medium text-sm whitespace-nowrap">
+            <div className="px-4 py-1.5 text-center bg-gray-200 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 font-medium text-sm whitespace-nowrap">
               {experience.duration}
             </div>
           </div>
 
-          <div className="space-y-4 text-[15px] text-gray-800">
+          <div className="space-y-4 text-[15px] text-gray-800 dark:text-gray-200">
             {experience.responsibilities.map((responsibility, index) => (
               <div key={index} className="group">
                 <div className="flex items-start gap-3">
-                  <div className="mt-1.5 min-w-4 h-4 rounded-full bg-gray-200 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-gray-500 group-hover:bg-gray-700 transition-colors"></div>
+                  <div className="mt-1.5 min-w-4 h-4 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-gray-500 dark:bg-gray-400 group-hover:bg-gray-700 dark:group-hover:bg-gray-300 transition-colors"></div>
                   </div>
-                  <p className="text-justify group-hover:text-gray-950 transition-colors">
+                  <p className="text-justify group-hover:text-gray-950 dark:group-hover:text-white transition-colors">
                     {responsibility.text}
                   </p>
                 </div>
@@ -65,16 +66,16 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
                         key={subIndex}
                         className="flex items-start gap-3 group/sub"
                       >
-                        <div className="mt-1.5 min-w-3 h-3 rounded-full border border-gray-300 flex items-center justify-center">
-                          <div className="w-1 h-1 rounded-full bg-gray-400 group-hover/sub:bg-gray-600 transition-colors"></div>
+                        <div className="mt-1.5 min-w-3 h-3 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center">
+                          <div className="w-1 h-1 rounded-full bg-gray-400 dark:bg-gray-500 group-hover/sub:bg-gray-600 dark:group-hover/sub:bg-gray-400 transition-colors"></div>
                         </div>
-                        <p className="text-gray-800 group-hover/sub:text-gray-950 transition-colors">
+                        <p className="text-gray-800 dark:text-gray-300 group-hover/sub:text-gray-950 dark:group-hover/sub:text-white transition-colors">
                           {sub.heading && (
-                            <span className="underline text-gray-800">
+                            <span className="underline text-gray-800 dark:text-gray-300">
                               {sub.heading}:
                             </span>
-                          )}
-                          {" "}{sub.description}
+                          )}{" "}
+                          {sub.description}
                         </p>
                       </div>
                     ))}

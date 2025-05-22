@@ -1,31 +1,19 @@
 import { RESUME_SHAREABLE_LINK } from "../constants/constants";
+import { FiExternalLink } from "react-icons/fi";
+
 export function Resume() {
   return (
     <div className="flex items-center">
       <button
         aria-label="Resume"
-        className=" h-9 bg-black gap-2 flex items-center hover:shadow-lg hover:bg-slate-800 text-white font-semibold text-sm  px-4 sm:px-6 rounded-lg"
-        onClick={() =>
-          window.open(
-            RESUME_SHAREABLE_LINK,
-            "_blank"
-          )
-        }
+        className="h-9 bg-gray-950 dark:bg-gray-700 gap-2 flex items-center hover:shadow-lg hover:bg-slate-800 dark:hover:bg-gray-950 text-white font-semibold text-sm px-4 sm:px-6 rounded-lg group"
+        onClick={() => window.open(RESUME_SHAREABLE_LINK, "_blank")}
       >
         Resume{" "}
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth="0"
-          version="1.1"
-          viewBox="0 0 16 16"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M3 1v12h12v-12h-12zM14 12h-10v-10h10v10zM2 14v-10.5l-1-1v12.5h12.5l-1-1h-10.5z"></path>
-          <path d="M5.5 4l2.5 2.5-3 3 1.5 1.5 3-3 2.5 2.5v-6.5z"></path>
-        </svg>
+        <FiExternalLink
+          size={16}
+          className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+        />
       </button>
     </div>
   );

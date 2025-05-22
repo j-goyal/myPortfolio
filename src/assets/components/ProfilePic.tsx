@@ -6,7 +6,7 @@ export function ProfilePic() {
       <div className="flex justify-center">
         <img
           src={profilePic}
-          alt="Jatin"
+          alt="Jatin's Profile Picture"
           className="rounded-full w-48 h-48 lg:w-64 lg:h-64 object-cover"
         />
       </div>
