@@ -6,7 +6,7 @@ export function Resume() {
     <div className="flex items-center">
       <button
         aria-label="Resume"
-        className="h-9 bg-gray-950 dark:bg-gray-700 gap-2 flex items-center hover:shadow-lg hover:bg-slate-800 dark:hover:bg-gray-950 text-white font-semibold text-sm px-4 sm:px-6 rounded-lg group"
+        className="h-9 bg-gray-950 border-gray-600 border gap-2 flex items-center hover:shadow-lg hover:bg-gray-800 text-white font-semibold text-sm px-4 sm:px-6 rounded-lg group"
         onClick={() => window.open(RESUME_SHAREABLE_LINK, "_blank")}
       >
         Resume{" "}

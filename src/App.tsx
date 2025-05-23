@@ -6,6 +6,7 @@ import { Achievements } from "./assets/components/Achievements";
 import { Skills } from "./assets/components/Skills";
 import { ThemeProvider } from "./assets/components/ThemeProvider";
 import "./App.css";
+import { ContactMe } from "./assets/components/ContactMe";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Experience />
           <Projects />
           <Achievements />
+          <ContactMe />
         </main>
       </div>
     </ThemeProvider>

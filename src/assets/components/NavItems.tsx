@@ -54,6 +54,15 @@ export function NavItems({
       >
         Awards
       </a>
+      <a
+        className={`hover:cursor-pointer hover:text-purple-900 dark:hover:text-purple-400 ${
+          activeSection === "contact" ? "text-purple-900 dark:text-purple-400" : "dark:text-gray-300"
+        }`}
+        href="#contact"
+        onClick={() => onItemClick?.()}
+      >
+        Reach Out
+      </a>
     </div>
   )
 }

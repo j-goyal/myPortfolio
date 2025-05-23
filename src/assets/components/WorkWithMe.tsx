@@ -7,7 +7,7 @@ export function WorkWithMe() {
       <button
         aria-label="Email Me"
         type="button"
-        className="text-md flex items-center gap-2 py-2.5 px-5 rounded-lg border bg-gray-950 dark:bg-gray-700 text-white border-gray-600 hover:bg-gray-700 dark:hover:bg-gray-950  transition-colors w-fit group"
+        className="text-md flex items-center gap-2 py-2.5 px-5 rounded-lg border bg-gray-950 text-white border-gray-600 hover:bg-gray-700 dark:hover:bg-gray-800 transition-colors w-fit group"
         onClick={() => window.open(`mailto:${WORK_WITH_ME_EMAIL}`, "_blank")}
       >
         Work with me
