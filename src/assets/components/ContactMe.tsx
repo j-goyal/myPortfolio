@@ -1,19 +1,23 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import { FiAlertTriangle, FiSend } from "react-icons/fi";
 import {
   EMAILJS_PUBLIC_KEY,
   EMAILJS_SERVICE_ID,
   EMAILJS_TEMPLATE_ID,
+  RECAPTCHA_SITE_KEY,
 } from "../constants/constants";
 import toast, { Toaster } from "react-hot-toast";
 import { useTheme } from "./ThemeProvider";
 
 export function ContactMe() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const { resolvedTheme } = useTheme();
 
   const getToastStyle = (type: "success" | "error") => {
@@ -28,7 +32,7 @@ export function ContactMe() {
         boxShadow: isDark
           ? "0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)"
           : "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        fontSize: "14px",
+        fontSize: "15px",
         fontWeight: "500",
         maxWidth: "400px",
       },
@@ -40,32 +44,65 @@ export function ContactMe() {
     };
   };
 
-const contactSchema = Yup.object().shape({
-  name: Yup.string()
-    .trim()
-    .matches(/^[a-zA-Z\s'-]+$/, "Name can only contain letters, spaces, apostrophes, or hyphens")
-    .min(2, "Name is too short")
-    .max(50, "Name is too long")
-    .required("Name is required"),
+  const handleRecaptchaChange = useCallback((token: string | null) => {
+    setRecaptchaToken(token);
+  }, []);
 
-  email: Yup.string()
-    .email("Invalid email address")
-    .transform((value) => value.toLowerCase())
-    .required("Email is required"),
+  const handleRecaptchaError = useCallback(() => {
+    if (!isSubmitting) {
+      setRecaptchaToken(null);
+      toast.error(
+        "reCAPTCHA error occurred. Please try again.",
+        getToastStyle("error")
+      );
+    }
+  }, [resolvedTheme]);
 
-  subject: Yup.string()
-    .trim()
-    .min(5, "Subject is too short")
-    .max(100, "Subject is too long")
-    .required("Subject is required"),
+  const handleRecaptchaExpired = useCallback(() => {
+    if (!isSubmitting) {
+      setRecaptchaToken(null);
+      toast.error(
+        "reCAPTCHA expired. Please verify again.",
+        getToastStyle("error")
+      );
+    }
+  }, [resolvedTheme]);
 
-  message: Yup.string()
-    .trim()
-    .min(10, "Message is too short")
-    .max(1000, "Message is too long")
-    .required("Message is required"),
-});
+  const resetRecaptcha = useCallback(() => {
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
+    setRecaptchaToken(null);
+  }, []);
 
+  const contactSchema = Yup.object().shape({
+    name: Yup.string()
+      .trim()
+      .matches(
+        /^[a-zA-Z\s'-]+$/,
+        "Name can only contain letters, spaces, apostrophes, or hyphens"
+      )
+      .min(2, "Name is too short")
+      .max(50, "Name is too long")
+      .required("Name is required"),
+
+    email: Yup.string()
+      .email("Invalid email address")
+      .transform((value) => value.toLowerCase())
+      .required("Email is required"),
+
+    subject: Yup.string()
+      .trim()
+      .min(5, "Subject is too short")
+      .max(100, "Subject is too long")
+      .required("Subject is required"),
+
+    message: Yup.string()
+      .trim()
+      .min(10, "Message is too short")
+      .max(1000, "Message is too long")
+      .required("Message is required"),
+  });
 
   const formik = useFormik({
     initialValues: {
@@ -76,6 +113,13 @@ const contactSchema = Yup.object().shape({
     },
     validationSchema: contactSchema,
     onSubmit: (values, { resetForm }) => {
+      if (!recaptchaToken) {
+        toast.error(
+          "Please complete the reCAPTCHA verification.",
+          getToastStyle("error")
+        );
+        return;
+      }
       setIsSubmitting(true);
 
       emailjs
@@ -87,6 +131,7 @@ const contactSchema = Yup.object().shape({
             from_email: values.email,
             subject: values.subject,
             message: values.message,
+            "g-recaptcha-response": recaptchaToken,
           },
           EMAILJS_PUBLIC_KEY
         )
@@ -95,6 +140,7 @@ const contactSchema = Yup.object().shape({
             "Message sent successfully! I'll get back to you soon.",
             getToastStyle("success")
           );
+          resetRecaptcha();
           resetForm();
         })
         .catch(() => {
@@ -102,6 +148,7 @@ const contactSchema = Yup.object().shape({
             "Failed to send message. Please try again.",
             getToastStyle("error")
           );
+          resetRecaptcha();
         })
         .finally(() => {
           setIsSubmitting(false);
@@ -109,12 +156,17 @@ const contactSchema = Yup.object().shape({
     },
   });
 
+  const handleClear = () => {
+    formik.resetForm();
+    resetRecaptcha();
+  };
+
   return (
     <div
       id="contact"
       className="flex flex-col items-center px-4 sm:px-6 md:px-8 justify-center scroll-my-10 py-12"
     >
-      <Toaster position="bottom-right" />
+      <Toaster position="top-center" />
       <div className="w-full lg:w-[980px] flex flex-col items-start">
         <h2 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-500 dark:from-gray-300 dark:to-gray-100 text-2xl mb-2">
           REACH OUT
@@ -126,8 +178,8 @@ const contactSchema = Yup.object().shape({
         <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400 dark:from-gray-500 dark:to-gray-300"></div>
 
         <div className="p-6 sm:p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="space-y-6 text-justify">
               <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                 Get in Touch
               </h3>
@@ -289,12 +341,25 @@ const contactSchema = Yup.object().shape({
                   )}
                 </div>
 
+                <div className="flex justify-center py-2">
+                  <div className="transform scale-90 sm:scale-100">
+                    <ReCAPTCHA
+                      key={resolvedTheme}
+                      ref={recaptchaRef}
+                      sitekey={RECAPTCHA_SITE_KEY}
+                      theme={resolvedTheme === "dark" ? "dark" : "light"}
+                      onChange={handleRecaptchaChange}
+                      onExpired={handleRecaptchaExpired}
+                      onError={handleRecaptchaError}
+                    />
+                  </div>
+                </div>
                 <div className="flex items-center justify-between">
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !recaptchaToken}
                     className={`flex items-center gap-2 py-2.5 px-6 rounded-lg border ${
-                      isSubmitting
+                      isSubmitting || !recaptchaToken
                         ? "bg-gray-500 cursor-not-allowed"
                         : "bg-gray-950 hover:bg-gray-800"
                     } text-white border-gray-600 transition-colors group`}
@@ -332,9 +397,7 @@ const contactSchema = Yup.object().shape({
                   </button>
                   <button
                     type="button"
-                    onClick={() => {
-                      formik.resetForm();
-                    }}
+                    onClick={handleClear}
                     disabled={isSubmitting}
                     className="py-2.5 px-6 rounded-lg border bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 border-gray-300 dark:border-gray-500 transition-colors"
                   >

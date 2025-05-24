@@ -1,6 +1,6 @@
 import { LinkedInIcon } from "./LinkedInIcon"
 import { GithubIcon } from "./GithubIcon"
-import { WorkWithMe } from "./WorkWithMe"
+import { EmailMe } from "./EmailMe"
 import { ProfilePic } from "./ProfilePic"
 import { PersonalOverview } from "./PersonalOverview"
 
@@ -18,7 +18,7 @@ export function AboutMe() {
                 <LinkedInIcon />
                 <GithubIcon />
               </div>
-              <WorkWithMe />
+              <EmailMe />
             </div>
           </div>
         </div>
