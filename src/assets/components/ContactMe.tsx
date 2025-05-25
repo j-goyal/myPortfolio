@@ -4,12 +4,6 @@ import { useState, useRef, useCallback } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import { FiAlertTriangle, FiSend } from "react-icons/fi";
-import {
-  EMAILJS_PUBLIC_KEY,
-  EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID,
-  RECAPTCHA_SITE_KEY,
-} from "../constants/constants";
 import toast, { Toaster } from "react-hot-toast";
 import { useTheme } from "./ThemeProvider";
 
@@ -19,7 +13,6 @@ export function ContactMe() {
   const formRef = useRef<HTMLFormElement>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const { resolvedTheme } = useTheme();
-
   const getToastStyle = (type: "success" | "error") => {
     const isDark = resolvedTheme === "dark";
 
@@ -41,7 +34,7 @@ export function ContactMe() {
         primary: type === "success" ? "#10b981" : "#ef4444",
         secondary: isDark ? "#374151" : "#ffffff",
       },
-      duration: 55000,
+      duration: 4000,
     };
   };
 
@@ -125,8 +118,8 @@ export function ContactMe() {
 
       emailjs
         .send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           {
             from_name: values.name,
             from_email: values.email,
@@ -134,7 +127,7 @@ export function ContactMe() {
             message: values.message,
             "g-recaptcha-response": recaptchaToken,
           },
-          EMAILJS_PUBLIC_KEY
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(() => {
           toast.success(
@@ -347,7 +340,7 @@ export function ContactMe() {
                     <ReCAPTCHA
                       key={resolvedTheme}
                       ref={recaptchaRef}
-                      sitekey={RECAPTCHA_SITE_KEY}
+                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                       theme={resolvedTheme === "dark" ? "dark" : "light"}
                       onChange={handleRecaptchaChange}
                       onExpired={handleRecaptchaExpired}

@@ -2,7 +2,3 @@ export const RESUME_SHAREABLE_LINK = "https://drive.google.com/file/d/1buAT7sGFr
 export const GITHUB_PROFILE_LINK = "https://github.com/j-goyal"
 export const LINKEDIN_PROFILE_LINK = "https://www.linkedin.com/in/jatin263/"
 export const WORK_WITH_ME_EMAIL = "jating07925@gmail.com"
-export const EMAILJS_SERVICE_ID = "service_sl9lxen"
-export const EMAILJS_TEMPLATE_ID = "template_3y5cnwd"
-export const EMAILJS_PUBLIC_KEY = "-pMJgqLFh-ZTflNan"
-export const RECAPTCHA_SITE_KEY = "6Leb0EcrAAAAAD6EkY6LMirxRrIkr3xPBZceX-Zq"

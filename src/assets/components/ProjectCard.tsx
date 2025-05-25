@@ -1,16 +1,16 @@
-import type React from "react"
-import { useState } from "react"
-import { VideoWithPlaceholder } from "./VideoWithPlaceholder"
-import { FiArrowUpRight } from "react-icons/fi"
+import type React from "react";
+import { useState } from "react";
+import { VideoWithPlaceholder } from "./VideoWithPlaceholder";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  technologies: string[]
-  link: string
-  videoSrc: string
-  placeholderSrc: string
-  isLast?: boolean
+  title: string;
+  description: string;
+  technologies: string[];
+  link: string;
+  videoSrc: string;
+  placeholderSrc: string;
+  isLast?: boolean;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -20,20 +20,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
   videoSrc,
   placeholderSrc,
-  isLast = false,
 }) => {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div className="relative font-math">
-      <div className="absolute left-0 md:left-8 top-8 w-4 h-4 rounded-full bg-white dark:bg-gray-800 border-2 border-gray-400 dark:border-gray-600 z-10 transform -translate-x-1/2 hidden md:block"></div>
-
-      {!isLast && (
-        <div className="absolute left-0 md:left-8 top-12 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 transform -translate-x-1/2 hidden md:block"></div>
-      )}
-
       <div
-        className={`ml-0 md:ml-16 bg-white dark:bg-gray-800 rounded-3xl shadow-lg transition-all duration-300 overflow-hidden ${
+        className={`bg-white dark:bg-gray-800 rounded-3xl shadow-lg transition-all duration-300 overflow-hidden ${
           isHovered ? "shadow-2xl transform -translate-y-1" : ""
         }`}
         onMouseEnter={() => setIsHovered(true)}
@@ -42,15 +35,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400 dark:from-gray-500 dark:to-gray-300"></div>
 
         <div className="p-6 sm:p-8">
-          <h3 className="font-bold text-xl text-gray-800 dark:text-gray-100 mb-6">{title}</h3>
+          <h3 className="font-bold text-xl text-gray-800 dark:text-gray-100 mb-6">
+            {title}
+          </h3>
 
           <div className="flex gap-6 lg:gap-8 flex-col lg:flex-row">
             <div className="flex-grow lg:w-1/2 overflow-hidden rounded-lg ">
-              <VideoWithPlaceholder src={videoSrc} alt={title} placeholderSrc={placeholderSrc} />
+              <VideoWithPlaceholder
+                src={videoSrc}
+                alt={title}
+                placeholderSrc={placeholderSrc}
+              />
             </div>
 
             <div className="flex flex-col gap-5 lg:w-1/2 justify-between">
-              <p className="text-gray-800 dark:text-gray-200 text-justify">{description}</p>
+              <p className="text-gray-800 dark:text-gray-200 text-justify">
+                {description}
+              </p>
 
               <div className="space-y-5">
                 <div className="flex flex-wrap gap-2">
@@ -79,5 +80,5 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

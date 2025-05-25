@@ -12,8 +12,6 @@ export const Projects: React.FC = () => (
     </div>
 
     <div className="relative w-full lg:w-[950px]">
-      <div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-400 to-gray-200 dark:from-gray-500 dark:to-gray-700 hidden md:block"></div>
-
       <div className="space-y-10">
         {projectData.map((project, index) => (
           <ProjectCard key={index} {...project} isLast={index === projectData.length - 1} />
