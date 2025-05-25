@@ -32,15 +32,16 @@ export function ContactMe() {
         boxShadow: isDark
           ? "0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2)"
           : "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        fontSize: "15px",
+        fontSize: "14px",
         fontWeight: "500",
         maxWidth: "400px",
+        padding: "8px 8px",
       },
       iconTheme: {
         primary: type === "success" ? "#10b981" : "#ef4444",
         secondary: isDark ? "#374151" : "#ffffff",
       },
-      duration: 5000,
+      duration: 55000,
     };
   };
 
@@ -342,7 +343,7 @@ export function ContactMe() {
                 </div>
 
                 <div className="flex justify-center py-2">
-                  <div className="transform scale-90 sm:scale-100">
+                  <div className="transform scale-50 xxs:scale-75 xs:scale-90 md:scale-95">
                     <ReCAPTCHA
                       key={resolvedTheme}
                       ref={recaptchaRef}
@@ -357,9 +358,9 @@ export function ContactMe() {
                 <div className="flex items-center justify-between">
                   <button
                     type="submit"
-                    disabled={isSubmitting || !recaptchaToken}
+                    disabled={isSubmitting}
                     className={`flex items-center gap-2 py-2.5 px-6 rounded-lg border ${
-                      isSubmitting || !recaptchaToken
+                      isSubmitting
                         ? "bg-gray-500 cursor-not-allowed"
                         : "bg-gray-950 hover:bg-gray-800"
                     } text-white border-gray-600 transition-colors group`}
