@@ -233,6 +233,7 @@ export function ContactMe() {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.name}
+                    autoComplete="name"
                     className={`w-full px-4 py-2 rounded-lg border ${
                       formik.touched.name && formik.errors.name
                         ? "border-red-500 dark:border-red-300"
@@ -262,6 +263,7 @@ export function ContactMe() {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
+                    autoComplete="email"
                     className={`w-full px-4 py-2 rounded-lg border ${
                       formik.touched.email && formik.errors.email
                         ? "border-red-500 dark:border-red-300"
