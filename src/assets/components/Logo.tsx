@@ -11,7 +11,7 @@ export function Logo({ resetActiveSection }: { resetActiveSection: () => void })
           resetActiveSection()
         }}
       >
-        Jatin Goyal.
+        Jatin .
       </a>
     </div>
   )
