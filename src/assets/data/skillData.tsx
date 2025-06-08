@@ -26,14 +26,17 @@ import {
 import { TbBrandCSharp } from "react-icons/tb";
 import { DiVisualstudio } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
+import { FaDocker } from "react-icons/fa";
+import { SiJira } from "react-icons/si";
 
 export const skillData = [
   { name: "C#", icon: <TbBrandCSharp className="text-purple-700" /> },
   { name: ".NET Core", icon: <SiDotnet className="text-purple-700" /> },
   { name: "Web APIs", icon: <FaNetworkWired className="text-blue-600" /> },
   { name: "Microservices", icon: <FaCubes className="text-green-600" /> },
-  { name: "LINQ", icon: <FaCode className="text-blue-500" /> },
+  { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
+  { name: "LINQ", icon: <FaCode className="text-blue-500" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-700" /> },
   { name: "React.js", icon: <FaReact className="text-blue-500" /> },
   { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
@@ -49,7 +52,8 @@ export const skillData = [
   { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
   { name: "Visual Studio", icon: <DiVisualstudio className="text-purple-700" />},
   { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
-  { name: "Bitbucket", icon: <FaBitbucket className="text-blue-500" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
+  { name: "Bitbucket", icon: <FaBitbucket className="text-blue-500" /> },
   { name: "Github", icon: <FaGithub className="text-black" /> },
+  { name: "Jira", icon: <SiJira className="text-blue-600" /> },
 ];
