@@ -10,6 +10,7 @@ interface ProjectCardProps {
   link: string;
   videoSrc: string;
   placeholderSrc: string;
+  features?: string[];
   isLast?: boolean;
 }
 
@@ -20,6 +21,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   link,
   videoSrc,
   placeholderSrc,
+  features,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -53,6 +55,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 {description}
               </p>
 
+              {features && features.length > 0 && (
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 uppercase tracking-wide">
+                    Key Features
+                  </h4>
+                  <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 pl-4 text-sm">
+                    {features.map((feature, idx) => (
+                      <li key={idx} className="leading-snug">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <div className="space-y-5">
                 <div className="flex flex-wrap gap-2">
                   {technologies.map((tech, index) => (

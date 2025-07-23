@@ -20,4 +20,5 @@ export interface Project {
     link: string;
     videoSrc: string;
     placeholderSrc: string;
+    features?: string[];
   }
