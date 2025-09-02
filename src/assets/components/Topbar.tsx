@@ -49,15 +49,15 @@ export function TopBar() {
     <div className="bg-white dark:bg-gray-800 fixed top-0 left-0 w-full z-50 shadow h-14 flex justify-between px-4 sm:px-6 md:px-8 items-center">
       <Logo resetActiveSection={resetActiveSection} />
 
-      <div className="hidden md:flex items-center">
+      <div className="hidden ml:flex items-center">
         <NavItems activeSection={activeSection} />
       </div>
-      <div className="hidden md:flex items-center gap-3">
+      <div className="hidden ml:flex items-center gap-3">
         <ThemeToggle />
         <Resume />
       </div>
 
-      <div className="md:hidden flex items-center">
+      <div className="ml:hidden flex items-center">
         <ThemeToggle />
         <button
           aria-label="Toggle menu"
