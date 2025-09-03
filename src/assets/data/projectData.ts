@@ -26,13 +26,13 @@ export const projectData: Project[] = [
     videoSrc: "",
     placeholderSrc: googleOAuthImg,
     features: [
-      "Google OAuth 2.0 with server-side token verification",
-      "Token-based auth using JWT with refresh rotation",
-      "Soft-delete and account restoration support",
-      "Device-wise session tracking and targeted logout",
-      "Role-based access control with protected routes",
-      "Admin panel with user list and session insights",
-      "Sleek, responsive, animated UI and persistent login",
+      "Secure Google OAuth 2.0 login",
+      "JWT authentication with refresh tokens",
+      "Soft-delete and easy account restore",
+      "Per-device session tracking & logout",
+      "Role-based route access protection",
+      "Admin panel with detailed insights",
+      "Animated & sleek UI with persistent login",
     ],
   },
   {
@@ -85,10 +85,10 @@ export const projectData: Project[] = [
     placeholderSrc: questQuizzyImg,
     features: [
       "Wide range of quiz categories",
-      "Color-changing countdown timer for urgency",
+      "Color-changing countdown for urgency",
       "Answer review with correct/incorrect flags",
       "Dynamic questions from API",
-      "Simple, engaging & Responsive UI for all devices",
+      "Simple, engaging & responsive UI",
     ],
-  },
+  }
 ];
