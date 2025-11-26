@@ -13,7 +13,32 @@ export const experienceData: ExperienceDetail[] = [
         text: "Implemented robust Stripe Subscription Management in .NET WebAPI + Next.js stack, covering Customers, Payment Methods, Products, Coupons, and Subscriptions, including secure Stripe Webhook handling to automate real-time billing events, impacting 100% of paying users and streamlining recurring payment operations.",
       },
       {
-        text: "Led data and file migration during rewrite from legacy PHP to React + .NET, extracting legacy data via MySQL scripts into CSV, importing into SQL Server using BCP, merging with production tables, and migrating large volumes of files from EC2 servers to Azure Blob Storage using AzCopy for seamless system integration.",
+        text: "Led end-to-end data and file migration as part of a full platform rewrite from legacy PHP to React + .NET, ensuring zero data loss, interoperability, and seamless cutover between legacy and modern systems.",
+        subResponsibilities: [
+          {
+            heading: "Database Migration (MySQL → SQL Server & MongoDB)",
+            description:
+              "Extracted legacy data using optimized MySQL dump scripts and stored procedures, transformed and imported records into SQL Server using BCP, pipelines, and migrated selective modules to MongoDB for document-based structures, ensuring schema mapping, referential integrity, and validation across environments.",
+          },
+          {
+            heading: "Data Merge & Validation",
+            description:
+              "Performed data merging with production tables, implemented validation scripts to detect duplicates or inconsistencies, and executed reconciliation testing to ensure migrated datasets aligned with live business rules and usage patterns.",
+          },
+          {
+            heading: "File System Migration to Azure Blob Storage",
+            description:
+              "Migrated large volumes of legacy files hosted on EC2 and public endpoints to Azure Blob Storage using a combination of automated batching scripts, and .NET multithreaded processes to accelerate download and upload time while preserving file metadata and directory structure.",
+          },
+          {
+            heading: "Automation & Performance Optimization",
+            description:
+              "Developed automated .NET utilities to orchestrate file transfers, handle retries, chunking, checksum verification, and parallel processing using threading to reduce execution time and improve migration reliability across environments.",
+          },
+        ],
+      },
+      {
+        text: "Optimized reporting performance by loading large datasets in controlled chunks via LINQ, improving memory efficiency and export reliability by writing streamed CSV output in batches, and fine-tuning SQL queries to significantly reduce execution time and system load."
       },
       {
         text: "Conducted technical interviews for Software Developer positions, evaluating candidates in C#, OOPs principles, .NET Core, Web APIs, SQL, JavaScript, HTML, CSS, and React.js, ensuring alignment with company's engineering standards and contributing to effective hiring decisions.",

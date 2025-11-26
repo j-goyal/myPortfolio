@@ -29,7 +29,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
       <div
         className={`ml-0 md:ml-16 bg-white dark:bg-gray-800 rounded-3xl shadow-lg transition-all duration-300 overflow-hidden ${
-          isHovered ? "shadow-2xl transform -translate-y-1" : ""
+          isHovered && !isExpanded ? "shadow-2xl transform -translate-y-1" : ""
         }`}
       >
         <div className="h-2 bg-gradient-to-r from-gray-600 to-gray-400 dark:from-gray-500 dark:to-gray-300"></div>
