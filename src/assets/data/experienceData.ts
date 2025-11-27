@@ -18,27 +18,22 @@ export const experienceData: ExperienceDetail[] = [
           {
             heading: "Database Migration (MySQL → SQL Server & MongoDB)",
             description:
-              "Extracted legacy data using optimized MySQL dump scripts and stored procedures, transformed and imported records into SQL Server using BCP, pipelines, and migrated selective modules to MongoDB for document-based structures, ensuring schema mapping, referential integrity, and validation across environments.",
+              "Migrated 2.75M+ records across 7-8 legacy tables from MySQL to SQL Server using BCP and MERGE operations, and automated MongoDB imports using Node.js to generate schema-driven collections.",
           },
           {
-            heading: "Data Merge & Validation",
+            heading: "Validation & Rollback",
             description:
-              "Performed data merging with production tables, implemented validation scripts to detect duplicates or inconsistencies, and executed reconciliation testing to ensure migrated datasets aligned with live business rules and usage patterns.",
+              "Executed incremental migration cycles (three staged runs) prior to go-live to ensure data accuracy and continuity. Implemented validation scripts for data integrity checks and developed rollback procedures for safe, reversible deployments.",
           },
           {
-            heading: "File System Migration to Azure Blob Storage",
+            heading: "File System Migration",
             description:
-              "Migrated large volumes of legacy files hosted on EC2 and public endpoints to Azure Blob Storage using a combination of automated batching scripts, and .NET multithreaded processes to accelerate download and upload time while preserving file metadata and directory structure.",
-          },
-          {
-            heading: "Automation & Performance Optimization",
-            description:
-              "Developed automated .NET utilities to orchestrate file transfers, handle retries, chunking, checksum verification, and parallel processing using threading to reduce execution time and improve migration reliability across environments.",
+              "Migrated 500GB+ legacy files by downloading source assets from archived URLs and uploading them to Azure Blob Storage through an existing .NET API, implementing parallel file transfer logic to significantly reduce processing time.",
           },
         ],
       },
       {
-        text: "Optimized reporting performance by loading large datasets in controlled chunks via LINQ, improving memory efficiency and export reliability by writing streamed CSV output in batches, and fine-tuning SQL queries to significantly reduce execution time and system load."
+        text: "Optimized reporting performance by loading large datasets in controlled chunks via LINQ, improving memory efficiency and export reliability by writing streamed CSV output in batches, and fine-tuning SQL queries to significantly reduce execution time and system load.",
       },
       {
         text: "Conducted technical interviews for Software Developer positions, evaluating candidates in C#, OOPs principles, .NET Core, Web APIs, SQL, JavaScript, HTML, CSS, and React.js, ensuring alignment with company's engineering standards and contributing to effective hiring decisions.",
