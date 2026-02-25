@@ -9,7 +9,7 @@ export function ProfilePic() {
         width={256}
         height={256}
         className="rounded-full w-48 h-48 lg:w-64 lg:h-64 object-cover"
-        priority
+        fetchPriority="high"
       />
     </div>
   );

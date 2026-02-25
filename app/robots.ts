@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { HOSTED_WEBSITE_URL } from "@/constants/constants";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://jating07925.vercel.app/sitemap.xml",
+    sitemap: `${HOSTED_WEBSITE_URL}/sitemap.xml`,
   };
 }

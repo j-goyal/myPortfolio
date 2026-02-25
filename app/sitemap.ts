@@ -1,9 +1,10 @@
 import { MetadataRoute } from "next";
+import { HOSTED_WEBSITE_URL } from "@/constants/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://jating07925.vercel.app",
+      url: HOSTED_WEBSITE_URL,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
