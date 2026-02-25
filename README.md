@@ -21,6 +21,7 @@ A timeline of my career journey, highlighting the organizations I've worked with
 ### 📂 My Projects
 An interactive showcase of the most significant personal projects I've worked on, including:
 
+- **GoogleOAuth**: Google Sign in with .NET APIs.
 - **QuickResume**: Create Resumes with Ease.
 - **TextUtils**: Do Fun With Text.
 - **QuestQuizzy**: Engaging Quiz Platform.
@@ -37,7 +38,7 @@ Recognition for my contributions and achievements in software development.
 ## 💡 Tech Stack
 This portfolio is built using:
 
-- **Frontend:** React, TypeScript, JavaScript, HTML, and Vite
+- **Frontend:** NextJs, React, TypeScript, JavaScript, HTML
 - **Styling:** Tailwind CSS
 - **Hosting:** Vercel
 
